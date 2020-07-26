@@ -8,5 +8,136 @@ body {
   font-size: 16px;
   font-family: "Karla", sans-serif;
   margin: 0;
+  color: #2d2640;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "DM Serif Display", serif;
+}
+
+h1,
+h2 {
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin: 0;
+  padding-top: 3rem;
+}
+
+h1 {
+  position: relative;
+}
+
+h1::before {
+  content: "";
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 10rem;
+}
+
+h2 {
+  position: relative;
+}
+
+h2::before {
+  content: "";
+  background-color: #2d2640;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 10rem;
+}
+
+.container {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1.1rem;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.align-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.btn {
+  padding: 0.8rem 2.5rem;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  text-transform: uppercase;
+}
+
+.btn-reversed {
+  color: #2d2640;
+  border: 2px solid #2d2640;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #837d87;
+}
+
+header {
+  background-color: #2d2640;
+  color: white;
+  padding: 1rem;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  background: url("./images/bg-pattern-intro-right-desktop.svg") no-repeat top right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+header::before {
+  content: "";
+  background: url("./images/bg-pattern-intro-left-desktop.svg") no-repeat bottom left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -2rem;
+  height: 100%;
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
