@@ -36,7 +36,7 @@ h1::before {
   position: absolute;
   top: 0;
   left: 0;
-  height: 2px;
+  height: 1px;
   width: 10rem;
 }
 
@@ -50,8 +50,16 @@ h2::before {
   position: absolute;
   top: 0;
   left: 0;
-  height: 2px;
+  height: 1px;
   width: 10rem;
+}
+
+p {
+  opacity: 0.8;
+}
+
+.mg-top {
+  margin-top: 5rem;
 }
 
 .container {
@@ -88,6 +96,7 @@ h2::before {
   background: transparent;
   color: white;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .btn-reversed {
@@ -116,8 +125,9 @@ nav ul li a {
 header {
   background-color: #2d2640;
   color: white;
-  padding: 1rem;
+  padding: 3rem 0 1rem 0;
   position: relative;
+  margin-bottom: 12rem;
 }
 
 header::after {
@@ -134,10 +144,39 @@ header::before {
   content: "";
   background: url("./images/bg-pattern-intro-left-desktop.svg") no-repeat bottom left;
   position: absolute;
-  top: 0;
+  bottom: -50%;
   left: 0;
-  bottom: -2rem;
   height: 100%;
   width: 100%;
+}
+
+header .flex .image .intro-img {
+  margin-bottom: -12rem;
+}
+
+.find-more {
+  background-color: #2d2640;
+  color: white;
+  padding: 5rem;
+  position: relative;
+}
+
+.find-more::after {
+  content: "";
+  background: url("./images/bg-pattern-how-we-work-desktop.svg") no-repeat right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.find-more h3 {
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  max-width: 63%;
+  line-height: 1;
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */
