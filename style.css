@@ -11,62 +11,11 @@ body {
   color: #2d2640;
 }
 
-h1,
-h2,
-h3 {
-  font-family: "DM Serif Display", serif;
-}
-
-h1,
-h2 {
-  font-size: 4rem;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  margin: 0;
-  padding-top: 3rem;
-}
-
-h1 {
-  position: relative;
-}
-
-h1::before {
-  content: "";
-  background-color: white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 1px;
-  width: 10rem;
-}
-
-h2 {
-  position: relative;
-}
-
-h2::before {
-  content: "";
-  background-color: #2d2640;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 1px;
-  width: 10rem;
-}
-
-p {
-  opacity: 0.8;
-}
-
-.mg-top {
-  margin-top: 5rem;
-}
-
 .container {
-  width: 1200px;
+  width: 1220px;
   max-width: 100%;
   margin: 0 auto;
-  padding: 1.1rem;
+  padding: 1.2rem;
 }
 
 .flex {
@@ -84,6 +33,66 @@ p {
           flex: 1;
 }
 
+h1,
+h2,
+h3 {
+  font-family: "DM Serif Display", serif;
+  letter-spacing: 0.5px;
+}
+
+h1,
+h2 {
+  font-size: 5rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin: 0;
+  padding-top: 3rem;
+}
+
+h1 {
+  position: relative;
+}
+
+h1::before {
+  content: "";
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 12rem;
+}
+
+h2 {
+  position: relative;
+}
+
+h2::before {
+  content: "";
+  background-color: #2d2640;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 12rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+.mg-top {
+  margin-top: 5rem;
+}
+
 .align-start {
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -95,13 +104,34 @@ p {
   border: 2px solid white;
   background: transparent;
   color: white;
+  outline: none;
   text-transform: uppercase;
+  font-family: "Karla", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   cursor: pointer;
+  -webkit-transition: 0.1s ease-in all;
+  transition: 0.1s ease-in all;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #2b272f;
 }
 
 .btn-reversed {
   color: #2d2640;
   border: 2px solid #2d2640;
+}
+
+.btn-reversed:hover {
+  background: #2d2640;
+  color: #fafafa;
+}
+
+.border-b {
+  border-bottom: 1px solid rgba(149, 169, 198, 0.8);
+  margin-bottom: 1.9rem;
 }
 
 nav ul {
@@ -120,6 +150,13 @@ nav ul li a {
   text-decoration: none;
   text-transform: uppercase;
   color: #837d87;
+  font-weight: 600;
+  -webkit-transition: 0.1s ease-in all;
+  transition: 0.1s ease-in all;
+}
+
+nav ul li a:hover {
+  color: #2d2640;
 }
 
 header {
@@ -130,6 +167,10 @@ header {
   margin-bottom: 12rem;
 }
 
+header * {
+  z-index: 1;
+}
+
 header::after {
   content: "";
   background: url("./images/bg-pattern-intro-right-desktop.svg") no-repeat top right;
@@ -137,7 +178,8 @@ header::after {
   top: 0;
   right: 0;
   height: 100%;
-  width: 100%;
+  width: 50%;
+  z-index: 2;
 }
 
 header::before {
@@ -148,27 +190,24 @@ header::before {
   left: 0;
   height: 100%;
   width: 100%;
+  z-index: 0;
 }
 
 header .flex .image .intro-img {
-  margin-bottom: -12rem;
+  margin-bottom: -10rem;
+}
+
+.flex div:not(:first-child) {
+  margin-left: 7rem;
 }
 
 .find-more {
+  background: url("./images/bg-pattern-how-we-work-desktop.svg") no-repeat right/50% 100%;
   background-color: #2d2640;
   color: white;
   padding: 5rem;
   position: relative;
-}
-
-.find-more::after {
-  content: "";
-  background: url("./images/bg-pattern-how-we-work-desktop.svg") no-repeat right;
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
+  margin: 7rem auto;
 }
 
 .find-more h3 {
@@ -178,5 +217,54 @@ header .flex .image .intro-img {
   max-width: 63%;
   line-height: 1;
   margin: 0;
+}
+
+footer {
+  background: url("./images/bg-pattern-footer-desktop.svg") no-repeat top left;
+  background-color: #fafafa;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 1.9rem 0;
+  position: relative;
+}
+
+footer h4 {
+  color: #837d87;
+}
+
+footer .social li {
+  margin-left: 1.5rem;
+}
+
+footer .social li a {
+  display: block;
+  -webkit-transition: 0.1s ease-in all;
+  transition: 0.1s ease-in all;
+}
+
+footer .social li a:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 0.8rem;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #2d2640;
+  -webkit-transition: 0.1s ease-in all;
+  transition: 0.1s ease-in all;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */
