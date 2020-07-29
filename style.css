@@ -86,7 +86,7 @@ p {
   font-weight: 600;
   letter-spacing: 1px;
   line-height: 1.5;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .mg-top {
@@ -171,6 +171,10 @@ header {
   margin-bottom: 12rem;
 }
 
+header h1 {
+  line-height: 1;
+}
+
 header * {
   z-index: 1;
 }
@@ -206,7 +210,7 @@ header .flex .image .intro-img {
 }
 
 .find-more {
-  background: url("./images/bg-pattern-how-we-work-desktop.svg") no-repeat right/50% 100%;
+  background: url("./images/bg-pattern-how-we-work-desktop.svg") no-repeat right/40% 100%;
   background-color: #2d2640;
   color: white;
   padding: 5rem;
