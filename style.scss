@@ -150,6 +150,10 @@ nav {
       }
     }
   }
+
+  .hamburger {
+    display: none;
+  }
 }
 
 // header styles
@@ -280,16 +284,18 @@ footer {
   }
   .btn {
     display: inline-block;
+    margin-top: 1rem;
   }
 
   h1,
   h2 {
-    font-size: 2.8rem;
+    font-size: 3rem;
   }
 
   h1 {
     &::before {
       width: 0rem;
+      display: none;
     }
   }
 
@@ -307,7 +313,9 @@ footer {
   }
 
   h3 {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    opacity: 0.9;
   }
 
   .mg-top {
@@ -320,8 +328,88 @@ footer {
 
   // navigation styles
   nav {
-    ul {
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 100;
+    background-color: white;
+    .flex {
+      flex-direction: row;
+    }
+
+    .logo {
+      text-align: left;
+    }
+
+    .hamburger {
       display: flex;
+      border: 0;
+      outline: none;
+      cursor: pointer;
+      background: transparent;
+
+      &::focus {
+        outline: none;
+      }
+
+      & .close {
+        display: none;
+      }
+
+      &.show .open {
+        display: none;
+      }
+
+      &.show .close {
+        display: block;
+      }
+    }
+
+    #menu {
+      .btn-reversed {
+        border-color: white;
+        color: white;
+        width: 85%;
+        padding: 1.3rem;
+
+        &:hover {
+          background-color: white;
+          color: $very-dark-violet;
+        }
+      }
+    }
+
+    ul {
+      display: none;
+
+      li {
+        margin: 2rem 0;
+        a {
+          color: white;
+          font-size: 1.5rem;
+          &:hover {
+            color: $dark-grayish-violet;
+          }
+        }
+      }
+
+      &.show {
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        z-index: 100;
+        top: 6.6rem;
+        left: 0;
+        margin: 0;
+        padding-top: 2rem;
+        background: url("./images/bg-pattern-mobile-nav.svg") no-repeat bottom /
+          100% 40%;
+        background-color: $very-dark-violet;
+      }
     }
   }
 
@@ -329,7 +417,7 @@ footer {
   header {
     background-color: $dark-violet;
     color: white;
-    padding: 1rem 0 1rem 0;
+    padding: 8rem 0 1rem 0;
     position: relative;
     margin-bottom: 3rem;
 
@@ -356,7 +444,7 @@ footer {
       position: absolute;
       bottom: 0;
       left: 0;
-      height: 50%;
+      height: 46%;
       width: 50%;
       z-index: 0;
     }
@@ -366,7 +454,8 @@ footer {
       .image {
         .intro-img {
           margin-bottom: 0rem;
-          width: 100%;
+          margin: -3.2rem -1.2rem 0;
+          max-width: calc(100% + 2.4rem);
         }
       }
     }
@@ -378,20 +467,20 @@ footer {
       margin-left: 0rem;
     }
 
-    p {
-      color: $dark-violet;
+    .feature p {
       opacity: 0.5;
+      color: $dark-violet;
     }
   }
 
   // find more section styles
   .find-more {
-    background: url("./images/bg-pattern-how-we-work-desktop.svg") no-repeat
-      right/70% 100%;
+    background: url("./images/bg-pattern-how-we-work-mobile.svg") no-repeat
+      right/47% 100%;
     background-color: $dark-violet;
     color: white;
-    padding: 3rem 1rem;
-    margin: 4rem auto;
+    padding: 5rem 1rem;
+    margin: 8rem auto;
 
     h3 {
       font-size: 2.8rem;
@@ -409,6 +498,10 @@ footer {
     letter-spacing: 1px;
     padding: 1.9rem 0;
     position: relative;
+
+    .footer-logo {
+      margin-top: 3rem;
+    }
 
     .flex {
       justify-content: center;
@@ -430,7 +523,7 @@ footer {
       }
 
       & li:not(:first-child) {
-        margin-left: 2rem;
+        margin-left: 1.2rem;
       }
     }
 

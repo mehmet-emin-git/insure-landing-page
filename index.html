@@ -12,6 +12,7 @@
     />
     <title>Insure landing page</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <nav>
@@ -20,7 +21,23 @@
           <div class="logo">
             <img src="./images/logo.svg" alt="logo image" aria-label="logo" />
           </div>
-          <ul>
+
+          <button class="hamburger" id="burger">
+            <img
+              class="open"
+              src="./images/icon-hamburger.svg"
+              alt="hamburger icon"
+              aria-label="hamburger menu icon"
+            />
+            <img
+              class="close"
+              src="./images/icon-close.svg"
+              alt="close icon"
+              aria-label="close hamburger"
+            />
+          </button>
+
+          <ul id="menu">
             <li><a href="#">How we work</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">Account</a></li>
@@ -55,7 +72,7 @@
     <section class="container">
       <h2 class="mg-top">We’re different</h2>
       <div class="flex mg-top align-start">
-        <div>
+        <div class="feature">
           <img
             src="./images/icon-snappy-process.svg"
             alt="snapy proccess"
@@ -67,7 +84,7 @@
             Don’t get stuck filling in tedious forms.
           </p>
         </div>
-        <div>
+        <div class="feature">
           <img
             src="./images/icon-affordable-prices.svg"
             alt="affordable prices"
@@ -78,7 +95,7 @@
             be low, but we still offer the best coverage possible.
           </p>
         </div>
-        <div>
+        <div class="feature">
           <img src="./images/icon-people-first.svg" alt="people first" />
           <h3>People First</h3>
           <p>

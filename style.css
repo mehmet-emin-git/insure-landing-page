@@ -159,6 +159,10 @@ nav ul li a:hover {
   color: #2d2640;
 }
 
+nav .hamburger {
+  display: none;
+}
+
 header {
   background-color: #2d2640;
   color: white;
@@ -280,13 +284,15 @@ footer ul li a:hover {
   }
   .btn {
     display: inline-block;
+    margin-top: 1rem;
   }
   h1,
   h2 {
-    font-size: 2.8rem;
+    font-size: 3rem;
   }
   h1::before {
     width: 0rem;
+    display: none;
   }
   h2 {
     position: relative;
@@ -301,7 +307,9 @@ footer ul li a:hover {
     width: 12rem;
   }
   h3 {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    opacity: 0.9;
   }
   .mg-top {
     margin-top: 3rem;
@@ -311,15 +319,91 @@ footer ul li a:hover {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  nav ul {
+  nav {
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 100;
+    background-color: white;
+  }
+  nav .flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  nav .logo {
+    text-align: left;
+  }
+  nav .hamburger {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+  }
+  nav .hamburger::focus {
+    outline: none;
+  }
+  nav .hamburger .close {
+    display: none;
+  }
+  nav .hamburger.show .open {
+    display: none;
+  }
+  nav .hamburger.show .close {
+    display: block;
+  }
+  nav #menu .btn-reversed {
+    border-color: white;
+    color: white;
+    width: 85%;
+    padding: 1.3rem;
+  }
+  nav #menu .btn-reversed:hover {
+    background-color: white;
+    color: #2b272f;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    margin: 2rem 0;
+  }
+  nav ul li a {
+    color: white;
+    font-size: 1.5rem;
+  }
+  nav ul li a:hover {
+    color: #837d87;
+  }
+  nav ul.show {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 100;
+    top: 6.6rem;
+    left: 0;
+    margin: 0;
+    padding-top: 2rem;
+    background: url("./images/bg-pattern-mobile-nav.svg") no-repeat bottom/100% 40%;
+    background-color: #2b272f;
   }
   header {
     background-color: #2d2640;
     color: white;
-    padding: 1rem 0 1rem 0;
+    padding: 8rem 0 1rem 0;
     position: relative;
     margin-bottom: 3rem;
   }
@@ -342,7 +426,7 @@ footer ul li a:hover {
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 50%;
+    height: 46%;
     width: 50%;
     z-index: 0;
   }
@@ -354,21 +438,22 @@ footer ul li a:hover {
   }
   header .flex .image .intro-img {
     margin-bottom: 0rem;
-    width: 100%;
+    margin: -3.2rem -1.2rem 0;
+    max-width: calc(100% + 2.4rem);
   }
   .flex div:not(:first-child) {
     margin-left: 0rem;
   }
-  .flex p {
-    color: #2d2640;
+  .flex .feature p {
     opacity: 0.5;
+    color: #2d2640;
   }
   .find-more {
-    background: url("./images/bg-pattern-how-we-work-desktop.svg") no-repeat right/70% 100%;
+    background: url("./images/bg-pattern-how-we-work-mobile.svg") no-repeat right/47% 100%;
     background-color: #2d2640;
     color: white;
-    padding: 3rem 1rem;
-    margin: 4rem auto;
+    padding: 5rem 1rem;
+    margin: 8rem auto;
   }
   .find-more h3 {
     font-size: 2.8rem;
@@ -383,6 +468,9 @@ footer ul li a:hover {
     letter-spacing: 1px;
     padding: 1.9rem 0;
     position: relative;
+  }
+  footer .footer-logo {
+    margin-top: 3rem;
   }
   footer .flex {
     -webkit-box-pack: center;
@@ -412,7 +500,7 @@ footer ul li a:hover {
     margin-left: 0;
   }
   footer .social li:not(:first-child) {
-    margin-left: 2rem;
+    margin-left: 1.2rem;
   }
   footer li {
     font-size: 0.9rem;
